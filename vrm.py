@@ -69,8 +69,11 @@ def calculate_metrics(data):
     return result
 
 # API call parameters
-api_url = "https://vrmapi.victronenergy.com/v2/installations/116491/stats?end=1730323200&interval=days&start=1727731200&type=kwh"
-token = "b1f7d2763ac033a64e4875721b2bcfb77a99cbeb18387c2a48b3bb3ad0b1157e"
+installation_id = "116491"  # Replace with your desired installation ID
+start_timestamp = "1727731200"
+end_timestamp = "1730323200"
+api_url = f"https://vrmapi.victronenergy.com/v2/installations/{installation_id}/stats?end={end_timestamp}&interval=days&start={start_timestamp}&type=kwh"
+token = "xxx"
 
 try:
     # Fetch data
